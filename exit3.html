@@ -697,11 +697,17 @@
                 document.querySelector('.withdraw-btn').style.display = 'block';
             });
 
-            document.querySelector('.withdraw-btn').addEventListener('click', async () => {
-                // Call withdraw function to withdraw the balance
-                await pyfinContract.methods.withdrawDividends().send({ from: selectedAccount });
-                alert('Withdraw successful!');
-            });
+            document.querySelector('.check-balance-btn').addEventListener('click', async () => {
+    // Call the dividends function to get the connected user's dividend balance in the contract (in wei)
+    const dividendsBalanceWei = await pyfinContract.methods.dividends(selectedAccount).call();
+    
+    // Convert the balance from wei to ether
+    const dividendsBalanceEther = web3.utils.fromWei(dividendsBalanceWei, 'ether');
+    
+    alert(`Your dividends balance in the contract is: ${dividendsBalanceEther} ETH`);
+    document.querySelector('.withdraw-btn').style.display = 'block';
+});
+
 
             // Fetch data from API
             fetch('https://magmascan.org/api/v2/tokens/0x370f19062A5bFa29390448A8070E74B3Bc16dECE/holders')
