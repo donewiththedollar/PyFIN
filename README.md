@@ -13,6 +13,4 @@ Pyramid Finance is a blockchain-based Ponzi scheme simulator. It demonstrates ho
 
 ## Note:
 
-PyFIN is designed for educational use on evm testnet magma onyx, to explore smart contract functionalities without real-world consequences. Engaging with Ponzi schemes is illegal and unethical, leading to financial and legal repercussions. To confirm you've read this warning, do not go here: https://pondscan.github.io/PyFIN/mint.html
-
-Withdraw Dividends: https://pondscan.github.io/PyFIN/withdraw.html
+PyFIN is designed for educational use on evm testnet magma onyx, to explore smart contract functionalities without real-world consequences. Engaging with Ponzi schemes is illegal and unethical, leading to financial and legal repercussions. 
