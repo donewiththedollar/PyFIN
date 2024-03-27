@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PyFIN Investments</title>
+    <title>PyFIN Minting Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
     <style>
         body {
@@ -76,6 +76,7 @@
         Welcome to Pyramid Finance, a venture for only the greatest degenerates. Mint a Share for 0.25 🌋 and partake in
         the dance of dividends. Anticipate returns in the unfolding narrative of PyFIN... (its a ponzi scheme)
     </div>
+    <div id="counter">Fetching data...</div>
     <button class="connect-wallet">Connect Wallet</button>
     <button class="mint-btn" style="display:none;">Invest 0.25 LAVA 🌋</button>
     <div class="warning">*FOR EDUCATION PURPOSES ONLY*</div>
@@ -600,6 +601,20 @@
                     })
                     .on('error', console.error);
             });
+        });
+
+        fetch('https://magmascan.org/api/v2/tokens/0xC531A80896532c21c06E6D2C3994756991766746/holders')
+        .then(response => response.json())
+        .then(data => {
+            const tokenHolders = data.items.length; // Number of token holders
+            const shares = data.items.reduce((acc, item) => acc + parseInt(item.value), 0); // Total number of shares
+            
+            // Update the counter in the HTML
+            document.getElementById('counter').textContent = `There are ${tokenHolders} investors holding ${shares} shares before you.`;
+        })
+        .catch(error => {
+            console.error('Error fetching data: ', error);
+            document.getElementById('counter').textContent = 'Unable to fetch data.';
         });
     </script>
     
