@@ -101,7 +101,7 @@
     <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti"></script>
     <script>
-        const contractAddress = "0x76F7F40627ce2FDe1f66c3b74AaF1b76B334E997";
+        const contractAddress = "0x370f19062A5bFa29390448A8070E74B3Bc16dECE";
         const mintPrice = 0.25; // In ETH
         const abi = [
             {
@@ -737,7 +737,7 @@
         });
 
 
-        fetch('https://magmascan.org/api/v2/tokens/0x76F7F40627ce2FDe1f66c3b74AaF1b76B334E997/holders')
+        fetch('https://magmascan.org/api/v2/tokens/0x370f19062A5bFa29390448A8070E74B3Bc16dECE/holders')
             .then(response => response.json())
             .then(data => {
                 const tokenHolders = data.items.length; // Number of token holders
