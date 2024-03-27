@@ -6,8 +6,9 @@ Pyramid Finance is a blockchain-based Ponzi scheme simulator. It demonstrates ho
 
 ## Features:
 
-- **NFT Minting:** Mint NFTs with 0.25 ETH.
+- **NFT Minting:** Mint NFTs (ponzi share) with 0.25 LAVA.
 - **Dividend Distribution:** Early holders benefit from new mints, receiving a return proportional to their place in the pyramid.
+- **Instant Payout:** Dividends are distributed in the same transaction a new share is purchased.
 - **Educational:** This is tool for demonstrating and understanding Ponzi schemes' dynamics.
 
 ## Note:
