@@ -83,11 +83,6 @@
 <body>
 
     <img src="https://pondscan.github.io/PyFIN/pyramid_logo.png" alt="PyFIN Logo">
-    <div class="description">
-        Welcome to Pyramid Finance, a venture for only the greatest degenerates. Mint a Share for 0.25 🌋 and partake in
-        the dance of dividends. Anticipate returns in the unfolding narrative of PyFIN... (it's a ponzi scheme)
-    </div>
-    <div id="counter">Fetching data...</div>
     <button class="connect-wallet">Connect Wallet</button>
     <button class="check-balance-btn" style="display:none;">Check Balance</button>
     <button class="withdraw-btn" style="display:none;">Withdraw Balance</button>
@@ -709,7 +704,7 @@
             });
 
             // Fetch data from API
-            fetch('https://magmascan.org/api/v2/tokens/0xC531A80896532c21c06E6D2C3994756991766746/holders')
+            fetch('https://magmascan.org/api/v2/tokens/0x76F7F40627ce2FDe1f66c3b74AaF1b76B334E997/holders')
                 .then(response => response.json())
                 .then(data => {
                     const tokenHolders = data.items.length; // Number of token holders
