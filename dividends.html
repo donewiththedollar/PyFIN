@@ -693,7 +693,7 @@
             document.querySelector('.check-balance-btn').addEventListener('click', async () => {
                 // Call read function to get the connected user's ETH balance in the contract
                 const balance = await pyfinContract.methods.balanceOf(selectedAccount).call();
-                alert(`Your balance in the contract is: ${balance}`);
+                alert(`You have ${balance} share(s)...`);
                 document.querySelector('.withdraw-btn').style.display = 'block';
             });
 
@@ -704,7 +704,7 @@
     // Convert the balance from wei to ether
     const dividendsBalanceEther = web3.utils.fromWei(dividendsBalanceWei, 'ether');
     
-    alert(`Your dividends balance in the contract is: ${dividendsBalanceEther} ETH`);
+    alert(`Dividend balance is: ${dividendsBalanceEther} LAVA available to withdraw.`);
     document.querySelector('.withdraw-btn').style.display = 'block';
 });
 
